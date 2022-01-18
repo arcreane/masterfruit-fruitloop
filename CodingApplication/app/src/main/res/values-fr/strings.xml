@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CodingApplication</string>
+    <string name="buttonText">Mon bouton android</string>
+    <string name="hello_coding">Bonjour La Coding!!</string>
+    <string name="newText">Ceci est un nouveau text</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="score">Score :</string>
+    <string name="_0">0</string>
+    <string name="easy">EASY</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="select_ndifficulty">Select\nDifficulty</string>
+    <string name="guess_a_number">Guess a number :</string>
+    <string name="enter_your_number">Enter Your Number</string>
+    <string name="make_a_guess">Make A Guess</string>
+    <string name="your_number_is">Your number is :</string>
+    <string name="too_high">TOO HIGH</string>
+    <string name="select_difficulty">Select Difficulty</string>
+    <string name="my_second_text_view">My second text view</string>
+    <string name="name">Name</string>
+    <string name="website_url">Website url</string>
+    <string name="https_www_google_com">https://www.google.com</string>
+    <string name="open_ninner_browser">Open\nInner Browser</string>
+    <string name="open_nexternal_browser">Open\nexternal Browser</string>
+</resources>
