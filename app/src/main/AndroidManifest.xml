@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FruitLoop">
         <activity
-            android:name=".MainActivity"
+            android:name=".Scores"
+            android:exported="false" />
+        <activity
+            android:name=".StartGame"
+            android:exported="false" />
+        <activity
+            android:name=".MainMenu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
