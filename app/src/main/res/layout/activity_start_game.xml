@@ -1,14 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StartGame">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Score :" />
+
+            <TextView
+                android:id="@+id/txtVScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tries Left :" />
+
+            <TextView
+                android:id="@+id/txtVTriesLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imgBtn1"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/kiwi" />
+
+            <ImageButton
+                android:id="@+id/imgBtn2"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/grape" />
+
+            <ImageButton
+                android:id="@+id/imgBtn3"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/strawberry" />
+
+            <ImageButton
+                android:id="@+id/imgBtn4"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/lemon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtVFruit1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_margin="5dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/txtVFruit2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_margin="5dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/txtVFruit3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_margin="5dp"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/txtVFruit4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_margin="5dp"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnValidation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Validate" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lstViewMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mainLayout">
+
+    </ListView>
+
 </RelativeLayout>
