@@ -6,9 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".Scores">
 
-    <Button
-        android:id="@+id/back_to_menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back To Menu" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:="">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main menu" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="80dp">
+
+            <TableRow
+                android:id="@+id/firstNameLine"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/purple_200">
+
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="Pseudo"
+                    android:textSize="18sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="Score"
+                    android:textSize="18sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="Round done"
+                    android:textSize="18sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreLine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/pseudo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/score1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/nbRound1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/roundsDone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/pseudo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/score2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/nbRound2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>
