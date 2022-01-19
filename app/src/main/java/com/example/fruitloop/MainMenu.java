@@ -1,7 +1,6 @@
 package com.example.fruitloop;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +12,7 @@ public class MainMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
+
         Button btnStartGame = findViewById(R.id.btn_start_game);
         btnStartGame.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -21,6 +21,7 @@ public class MainMenu extends AppCompatActivity {
                 startActivity(startGame);
             }
         });
+
         Button btnScores = findViewById(R.id.btn_scores);
         btnScores.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +30,7 @@ public class MainMenu extends AppCompatActivity {
                 startActivity(scores);
             }
         });
+
         Button btnQuit = findViewById(R.id.btn_quit);
         btnQuit.setOnClickListener(new View.OnClickListener() {
             @Override
