@@ -13,7 +13,7 @@ public class Scores extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scores);
-        Button btnBackMenu = findViewById(R.id.back_to_menu);
+        Button btnBackMenu = findViewById(R.id.btn_back_to_menu);
         btnBackMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
