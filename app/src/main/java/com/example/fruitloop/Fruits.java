@@ -1,16 +1,21 @@
 package com.example.fruitloop;
 
+import static com.example.fruitloop.HintType.*;
+import static java.lang.Boolean.FALSE;
+import static java.lang.Boolean.TRUE;
+
+import java.util.ArrayList;
+
 public enum Fruits {
-    BANANA("@drawable/banana", Boolean.TRUE, Boolean.FALSE, Boolean.TRUE),
-    GRAPE("@drawable/grape", Boolean.FALSE, Boolean.TRUE, Boolean.FALSE),
-    KIWI("@drawable/kiwi", Boolean.TRUE, Boolean.FALSE, Boolean.TRUE),
-    LEMON("@drawable/lemon", Boolean.FALSE, Boolean.TRUE, Boolean.TRUE),
-    ORANGE("@drawable/orange", Boolean.FALSE, Boolean.TRUE, Boolean.TRUE),
-    PRUNE("@drawable/prune", Boolean.FALSE, Boolean.TRUE, Boolean.FALSE),
-    RASPBERRY("@drawable/raspberry", Boolean.TRUE, Boolean.FALSE, Boolean.FALSE),
-    STRAWBERRY("@drawable/strawberry", Boolean.TRUE, Boolean.FALSE, Boolean.FALSE);
+    BANANA("@drawable/banana",TRUE, FALSE, TRUE),
+    GRAPE("@drawable/grape", FALSE, TRUE, FALSE),
+    KIWI("@drawable/kiwi", TRUE, FALSE, TRUE),
+    LEMON("@drawable/lemon", FALSE, TRUE, TRUE),
+    ORANGE("@drawable/orange", FALSE, TRUE, TRUE),
+    PRUNE("@drawable/prune", FALSE, TRUE, FALSE),
+    RASPBERRY("@drawable/raspberry", TRUE, FALSE, FALSE),
+    STRAWBERRY("@drawable/strawberry", TRUE, FALSE, FALSE);
 
-    Fruits(String imgSrc, Boolean withoutSeeds, Boolean withSeeds, Boolean peelable) {
+    Fruits(String imgSrc, boolean withoutSeeds, boolean withSeeds, boolean peelable) {
     }
-
 }
