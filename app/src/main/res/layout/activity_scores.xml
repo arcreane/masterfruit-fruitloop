@@ -10,17 +10,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:="">
+        >
 
         <Button
+            android:id="@+id/back_to_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Main menu" />
 
         <TableLayout
+            topLeftRadius="4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="80dp">
+            android:layout_margin="80dp"
+            android:>
 
             <TableRow
                 android:id="@+id/firstNameLine"
@@ -30,7 +33,7 @@
 
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/headPseudo"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
                     android:gravity="center_horizontal"
