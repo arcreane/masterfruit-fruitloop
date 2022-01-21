@@ -33,9 +33,14 @@ public class Game {
         return fruitGameArray;
     }
 
-    /*public boolean isWithSeeds() {
-        return fruitGameArray == Fruits(equals(Boolean.getBoolean(withSeeds)));
-    }*/
+    public ArrayList<Fruits> getFruitGameArray() {
+        return fruitGameArray;
+    }
+
+    public void setFruitGameArray(ArrayList<Fruits> fruitGameArray) {
+        this.fruitGameArray = fruitGameArray;
+    }
+
     public String indices(HintType hint) {
 
         int test = 10;
@@ -44,50 +49,27 @@ public class Game {
 
         if (hint == HintType.SEED) {
             result1 = test - 2;
-            for(Fruits seed : fruitGameArray) {
-                if (seed.getDeclaringClass().isInterface(HintType.SEED.fruitsseed) == fruitGameArray) {
+            for(Fruits seeds : getFruitGameArray()) {
+                if (seeds.isWithSeeds() == getFruitGameArray().equals(Fruits.class.equals(seeds.isWithSeeds()))) {
                     return "T";
+                } else {
+                    return "F";
                 }
             }
-            return String.valueOf(result1) + (indice_1);
-            //return String.valueOf(indice_1);
         } else if (hint == HintType.PEEL) {
             result2 = test - 3;
-            return String.valueOf(result2) + (indice_2);
+            for (Fruits peels : getFruitGameArray()) {
+                if (peels.isPeelable() == getFruitGameArray().equals(Fruits.class.equals(peels.isPeelable()))) {
+                    return "T";
+                } else {
+                    return "F";
+                }
+            }
         } else {
             return null;
         }
+        return null;
     }
-
-    /**public boolean Indices (Boolean indice_1, Boolean indice2, int test) {
-       test = 10;
-        Boolean withSeeds = true;
-        Boolean peelable = true;
-
-        if(indice_1) {
-            int result = test - 2;
-            randomFruit() == Fruits.valueOf(Fruits, withSeeds);
-            return true;
-        }
-
-        return false;
-    }*/
-
-    /**public enum Boolean implements Comparable<Boolean>
-    {
-        FALSE(false), TRUE(true);
-        private Boolean(boolean value) {
-            this.value = value;
-        }
-        private final boolean value;
-        public boolean booleanValue() {
-            return value;
-        }
-
-        public String toString() {
-            return value ? "true" : "false";
-        }
-    }*/
 
 }
 

@@ -1,6 +1,5 @@
 package com.example.fruitloop;
 
-import static com.example.fruitloop.HintType.*;
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
@@ -16,6 +15,23 @@ public enum Fruits {
     RASPBERRY("@drawable/raspberry", TRUE, FALSE, FALSE),
     STRAWBERRY("@drawable/strawberry", TRUE, FALSE, FALSE);
 
+    private final String imgSrc;
+    private final boolean withoutSeeds;
+    private final boolean withSeeds;
+    private final boolean peelable;
+
     Fruits(String imgSrc, boolean withoutSeeds, boolean withSeeds, boolean peelable) {
+        this.imgSrc = imgSrc;
+        this.withoutSeeds = withoutSeeds;
+        this.withSeeds = withSeeds;
+        this.peelable = peelable;
+    }
+
+    public boolean isWithSeeds() {
+        return withSeeds;
+    }
+
+    public boolean isPeelable() {
+        return peelable;
     }
 }

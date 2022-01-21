@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartGame">
+    tools:context=".MainGame">
 
     <LinearLayout
         android:id="@+id/mainLayout"
@@ -89,6 +89,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/startGame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
