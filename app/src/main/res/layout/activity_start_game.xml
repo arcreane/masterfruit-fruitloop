@@ -54,6 +54,43 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layoutIndices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/answer1_indices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/answer2_indices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/answer3_indices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/answer4_indices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/playerSelectionLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -90,7 +127,8 @@
                 android:layout_height="85dp"
                 android:layout_weight="1"
                 android:layout_margin="10dp"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/lemon" />
         </LinearLayout>
 
         <LinearLayout
