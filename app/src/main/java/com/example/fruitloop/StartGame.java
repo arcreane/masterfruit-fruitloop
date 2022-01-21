@@ -64,6 +64,7 @@ public class StartGame extends AppCompatActivity {
         registerForContextMenu(imgVFruit3);
         registerForContextMenu(imgVFruit4);
 
+        // Here we place the logic to play the actual game
         Button btnValidation = findViewById(R.id.btnValidation);
         btnValidation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,9 +74,9 @@ public class StartGame extends AppCompatActivity {
                 System.out.println(playerGuessList);
                 if(randomFruitSelection.equals(playerGuessList)) {
                     Toast.makeText(getApplicationContext(), "You win!", Toast.LENGTH_SHORT).show();
-                    playerScore += 10 - playerTryCounter;
+                    playerScore += playerTryCounter -1;
                     txtScore.setText(String.valueOf(playerScore));
-                    endGamePopWindow();
+                    endGamePopWindowWin();
                 } else {
                     Toast.makeText(getApplicationContext(), "Try Again", Toast.LENGTH_SHORT).show();
                 }
@@ -83,7 +84,7 @@ public class StartGame extends AppCompatActivity {
                 playerTryCounter -= 1;
                 txtTriesLeft.setText(String.valueOf(playerTryCounter));
                 if(playerTryCounter == 0) {
-                    endGamePopWindow();
+                    endGamePopWindowLoose();
                 }
 
             }
@@ -131,15 +132,25 @@ public class StartGame extends AppCompatActivity {
         return null;
     }
 
-    public void endGamePopWindow() {
-        Button playAgainBtn;
-        TextView gameOverTxt;
+    public void endGamePopWindowWin() {
         AlertDialog.Builder dialogBuilder;
         AlertDialog dialog;
         dialogBuilder = new AlertDialog.Builder(this);
-        final View gameOverView = getLayoutInflater().inflate(R.layout.game_over_window, null);
-        gameOverTxt = findViewById(R.id.gameOvertxt);
-        playAgainBtn = findViewById(R.id.btnPlayAgain);
+        final View gameOverView = getLayoutInflater().inflate(R.layout.end_game_window_win, null);
+        TextView gameOverTxt = findViewById(R.id.gameOvertxt);
+        Button playAgainBtn = findViewById(R.id.btnPlayAgain);
+        dialogBuilder.setView(gameOverView);
+        dialog = dialogBuilder.create();
+        dialog.show();
+    }
+
+    public void endGamePopWindowLoose() {
+        AlertDialog.Builder dialogBuilder;
+        AlertDialog dialog;
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View gameOverView = getLayoutInflater().inflate(R.layout.end_game_window_loose, null);
+        TextView gameOverTxt = findViewById(R.id.endGameLoosetxt);
+        Button playAgainBtn = findViewById(R.id.endGameLoosebtn);
         dialogBuilder.setView(gameOverView);
         dialog = dialogBuilder.create();
         dialog.show();

@@ -10,19 +10,19 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/gameOvertxt"
+            android:id="@+id/endGameLoosetxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="60dp"
             android:textSize="30sp"
-            android:text="Do you wish to play again?" />
+            android:text="You lost the game" />
 
         <Button
-            android:id="@+id/btnPlayAgain"
+            android:id="@+id/endGameLoosebtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Play Again" />
+            android:text="Try again" />
     </LinearLayout>
 </RelativeLayout>
