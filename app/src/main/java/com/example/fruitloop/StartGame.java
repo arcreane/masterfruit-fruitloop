@@ -3,9 +3,12 @@ package com.example.fruitloop;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -13,11 +16,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Random;
 
 public class StartGame extends AppCompatActivity {
+
     LinkedHashMap<Integer, Fruits> completeFruitList = new LinkedHashMap<>();
     LinkedHashMap<Integer, Fruits> playerGuessList = new LinkedHashMap<>();
     Integer randomKey;
@@ -42,6 +48,7 @@ public class StartGame extends AppCompatActivity {
         completeFruitList.put(R.id.mi_banana, Fruits.BANANA);
         completeFruitList.put(R.id.mi_grape, Fruits.GRAPE);
         completeFruitList.put(R.id.mi_raspberry, Fruits.RASPBERRY);
+
 
         // Here we create the fruit array that the player needs to discover
         LinkedHashMap<Integer, Fruits> randomFruitSelection = new LinkedHashMap<>();
@@ -91,6 +98,7 @@ public class StartGame extends AppCompatActivity {
         });
     }
 
+
     // Here we add our context menu to change the fruits in our row
     ImageView selectedImageView;
     @Override
@@ -106,9 +114,16 @@ public class StartGame extends AppCompatActivity {
         selectedImageView.setImageDrawable(null);
         if(!item.getTitle().toString().contentEquals("Clear")) {
             selectedImageView.setImageBitmap(((BitmapDrawable) item.getIcon()).getBitmap());
-            playerGuessList.put(item.getItemId(),  getFruit(item.getTitle().toString().toUpperCase(Locale.ROOT)));
+            playerGuessList.put(item.getItemId(), getFruit(item.getTitle().toString().toUpperCase(Locale.ROOT)));
             return true;
         }
+        return true;
+    }
+
+    @Override //displaying the burger menu
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.nav_menu, menu);
         return true;
     }
 
@@ -130,6 +145,24 @@ public class StartGame extends AppCompatActivity {
             }
         }
         return null;
+    }
+
+    @Override //popup to show that the index selection is taken into account
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.indice_1:
+                Toast.makeText(this, "selected", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.indice_2:
+                Toast.makeText(this, "Indice 2 selected", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.quit:
+                Toast.makeText(this, "Quited", Toast.LENGTH_SHORT).show();
+                System.exit(0);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void endGamePopWindowWin() {
