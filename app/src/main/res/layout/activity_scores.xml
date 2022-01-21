@@ -7,10 +7,10 @@
     tools:context=".Scores">
 
     <LinearLayout
+        android:id="@+id/roundOne1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/back_to_menu"
@@ -19,14 +19,12 @@
             android:text="Main menu" />
 
         <TableLayout
-            topLeftRadius="4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="80dp"
-            android:>
+            android:layout_margin="80dp">
 
             <TableRow
-                android:id="@+id/firstNameLine"
+                android:id="@+id/headFirstName"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@color/purple_200">
@@ -44,7 +42,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/headRoundDone"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal"
@@ -66,14 +64,14 @@
             </TableRow>
 
             <TableRow
-                android:id="@+id/scoreLine"
+                android:id="@+id/scoreLine1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/pseudo1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="TextView" />
 
                 <TextView
@@ -90,7 +88,7 @@
             </TableRow>
 
             <TableRow
-                android:id="@+id/roundsDone"
+                android:id="@+id/scoreLine2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -112,6 +110,79 @@
                     android:layout_height="wrap_content"
                     android:text="TextView" />
             </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreLine3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/pseudo3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/score3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/nbRound3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreLine4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/pseudo4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/score4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/nbRound4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreLine5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/pseudo5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/score5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/nbRound5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+            </TableRow>
+
         </TableLayout>
 
     </LinearLayout>
