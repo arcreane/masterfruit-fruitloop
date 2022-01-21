@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!-- Creation of the burger menu with its tabs -->
+    <item android:id="@+id/indice_1"
+        android:icon="@drawable/ic_hamburger"
+        android:title="Indice 1"
+        app:showAsAction="collapseActionView"/>
+
+    <item android:id="@+id/indice_2"
+        android:icon="@drawable/ic_hamburger"
+        android:title="Indice 2"
+        app:showAsAction="collapseActionView"/>
+
+    <item android:id="@+id/quit"
+        android:icon="@drawable/ic_hamburger"
+        android:title="Quit"
+        app:showAsAction="collapseActionView"/>
+
+</menu>

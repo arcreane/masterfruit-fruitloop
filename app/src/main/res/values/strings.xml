@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FruitLoop</string>
+    <string name="withSeed">withSeed</string>
 </resources>

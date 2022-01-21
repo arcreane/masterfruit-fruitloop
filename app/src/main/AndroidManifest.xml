@@ -13,7 +13,7 @@
             android:name=".Scores"
             android:exported="false" />
         <activity
-            android:name=".StartGame"
+            android:name=".MainGame"
             android:exported="false" />
         <activity
             android:name=".MainMenu"
