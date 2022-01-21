@@ -14,5 +14,4 @@ public enum Fruits {
     Fruits(int fruitId) {
         this.fruitId = fruitId;
     }
-
 }

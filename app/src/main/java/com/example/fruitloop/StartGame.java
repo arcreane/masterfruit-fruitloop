@@ -2,6 +2,7 @@ package com.example.fruitloop;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import android.app.AlertDialog;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -18,7 +19,7 @@ import java.util.Random;
 
 public class StartGame extends AppCompatActivity {
     LinkedHashMap<Integer, Fruits> completeFruitList = new LinkedHashMap<>();
-    LinkedHashMap<Integer, Fruits> playerGuessListMenu = new LinkedHashMap<>();
+    LinkedHashMap<Integer, Fruits> playerGuessList = new LinkedHashMap<>();
     Integer randomKey;
     int playerTryCounter = 10;
     int playerScore = 0;
@@ -68,15 +69,23 @@ public class StartGame extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Here we check if the players answer is correct
-                if(randomFruitSelection.equals(playerGuessListMenu)) {
+                System.out.println(randomFruitSelection);
+                System.out.println(playerGuessList);
+                if(randomFruitSelection.equals(playerGuessList)) {
                     Toast.makeText(getApplicationContext(), "You win!", Toast.LENGTH_SHORT).show();
+                    playerScore += 10 - playerTryCounter;
+                    txtScore.setText(String.valueOf(playerScore));
+                    endGamePopWindow();
                 } else {
                     Toast.makeText(getApplicationContext(), "Try Again", Toast.LENGTH_SHORT).show();
                 }
+                playerGuessList = new LinkedHashMap<>();
                 playerTryCounter -= 1;
                 txtTriesLeft.setText(String.valueOf(playerTryCounter));
                 if(playerTryCounter == 0) {
+                    endGamePopWindow();
                 }
+
             }
         });
     }
@@ -96,7 +105,7 @@ public class StartGame extends AppCompatActivity {
         selectedImageView.setImageDrawable(null);
         if(!item.getTitle().toString().contentEquals("Clear")) {
             selectedImageView.setImageBitmap(((BitmapDrawable) item.getIcon()).getBitmap());
-            playerGuessListMenu.put(item.getItemId(),  getFruit(item.getTitle().toString().toUpperCase(Locale.ROOT)));
+            playerGuessList.put(item.getItemId(),  getFruit(item.getTitle().toString().toUpperCase(Locale.ROOT)));
             return true;
         }
         return true;
@@ -120,5 +129,19 @@ public class StartGame extends AppCompatActivity {
             }
         }
         return null;
+    }
+
+    public void endGamePopWindow() {
+        Button playAgainBtn;
+        TextView gameOverTxt;
+        AlertDialog.Builder dialogBuilder;
+        AlertDialog dialog;
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View gameOverView = getLayoutInflater().inflate(R.layout.game_over_window, null);
+        gameOverTxt = findViewById(R.id.gameOvertxt);
+        playAgainBtn = findViewById(R.id.btnPlayAgain);
+        dialogBuilder.setView(gameOverView);
+        dialog = dialogBuilder.create();
+        dialog.show();
     }
 }
