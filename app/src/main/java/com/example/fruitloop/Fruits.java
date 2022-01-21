@@ -3,8 +3,6 @@ package com.example.fruitloop;
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
-import java.util.ArrayList;
-
 public enum Fruits {
     BANANA("@drawable/banana",TRUE, FALSE, TRUE),
     GRAPE("@drawable/grape", FALSE, TRUE, FALSE),
@@ -33,5 +31,23 @@ public enum Fruits {
 
     public boolean isPeelable() {
         return peelable;
+    }
+
+    public String getImgSrc() {
+        return imgSrc;
+    }
+
+    public boolean isWithoutSeeds() {
+        return withoutSeeds;
+    }
+
+    @Override
+    public String toString() {
+        return "Fruits{" +
+                "imgSrc='" + imgSrc + '\'' +
+                ", withoutSeeds=" + withoutSeeds +
+                ", withSeeds=" + withSeeds +
+                ", peelable=" + peelable +
+                '}';
     }
 }

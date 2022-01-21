@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -18,6 +20,10 @@ public class MainGame extends AppCompatActivity {
 
     //Map<Integer, ArrayList> associationLinearLayoutIdGame = new HashMap<>();
     Map<Integer, HintType> associationItemIdHintType = new HashMap<>();
+    //LinearLayout layoutId = findViewById(R.id.layoutIndices);
+    /**MenuItem seed = findViewById(R.id.indice_1);
+    MenuItem peel = findViewById(R.id.indice_2);
+    MenuItem quit = findViewById(R.id.quit);*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +32,10 @@ public class MainGame extends AppCompatActivity {
         //associationLinearLayoutIdGame.put(R.id.startGame, new Game().randomFruit());
         associationItemIdHintType.put(R.id.indice_2, HintType.PEEL);
         associationItemIdHintType.put(R.id.indice_1, HintType.SEED);
+        /**seed = findViewById(R.id.indice_1);
+        peel = findViewById(R.id.indice_2);
+        quit = findViewById(R.id.quit);*/
+
     }
 
     @Override //displaying the burger menu
@@ -40,6 +50,8 @@ public class MainGame extends AppCompatActivity {
         HintType hint = associationItemIdHintType.get(item.getItemId());
         Toast.makeText(this, "selected", Toast.LENGTH_SHORT).show();
         //for ()
+
+        //layoutId.setVisibility(View.VISIBLE);
         /**switch (item.getItemId()) {
             case R.id.indice_1:
                 Toast.makeText(this, "selected", Toast.LENGTH_SHORT).show();

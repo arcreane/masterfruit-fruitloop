@@ -33,12 +33,23 @@ public class Game {
         return fruitGameArray;
     }
 
+    public Game(ArrayList<Fruits> fruitGameArray) {
+        this.fruitGameArray = fruitGameArray;
+    }
+
     public ArrayList<Fruits> getFruitGameArray() {
         return fruitGameArray;
     }
 
     public void setFruitGameArray(ArrayList<Fruits> fruitGameArray) {
         this.fruitGameArray = fruitGameArray;
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" +
+                "fruitGameArray=" + fruitGameArray +
+                '}';
     }
 
     public String indices(HintType hint) {
@@ -70,6 +81,5 @@ public class Game {
         }
         return null;
     }
-
 }
 
