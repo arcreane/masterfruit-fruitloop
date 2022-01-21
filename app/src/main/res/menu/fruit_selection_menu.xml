@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/mi_strawberry"
+        android:icon="@drawable/strawberry"
+        android:title="Strawberry"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/mi_banana"
+        android:icon="@drawable/banana"
+        android:title="Banana"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/mi_grape"
+        android:icon="@drawable/grape"
+        android:title="Grape"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/mi_kiwi"
+        android:icon="@drawable/kiwi"
+        android:title="Kiwi"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/mi_lemon"
+        android:icon="@drawable/lemon"
+        android:title="Lemon"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/mi_prune"
+        android:icon="@drawable/prune"
+        android:title="Prune"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/mi_raspberry"
+        android:icon="@drawable/raspberry"
+        android:title="Raspberry"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/mi_orange"
+        android:icon="@drawable/orange"
+        android:title="Orange"
+        app:showAsAction="always"/>
+</menu>
